@@ -3,9 +3,10 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ClipboardCheck, Calendar, BadgeCheck, ThumbsUp } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import Image from 'next/image';
 
-const steps = [
+const steps: { icon: LucideIcon; step: string; title: string; description: string }[] = [
   {
     icon: ClipboardCheck,
     step: '01',
