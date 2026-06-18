@@ -3,9 +3,9 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Scissors, TreePine, Hammer, Droplets, Sparkles, Brush } from 'lucide-react';
-import Image from 'next/image';
+import type { LucideIcon } from 'lucide-react';
 
-const services = [
+const services: { icon: LucideIcon; name: string; description: string }[] = [
   {
     icon: Scissors,
     name: 'Lawn Care & Mowing',
@@ -116,7 +116,7 @@ function ServiceCard({
   index,
 }: {
   service: { name: string; description: string };
-  Icon: React.ComponentType<{ size?: number; className?: string }>;
+  Icon: LucideIcon;
   index: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
