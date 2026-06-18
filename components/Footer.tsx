@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Phone, Mail, Clock, MapPin } from 'lucide-react';
+import { Phone, Clock, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
